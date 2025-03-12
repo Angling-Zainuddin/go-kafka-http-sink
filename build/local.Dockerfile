@@ -8,7 +8,7 @@ WORKDIR /app
 RUN go env -w GOPRIVATE=$GOPRIVATE && \
     echo $GOPRIVATE
 
-ADD build/ci/.netrc /root/.netrc
+#ADD build/ci/.netrc /root/.netrc
 
 ARG CMD_PATH
 ENV CMD_PATH=${CMD_PATH}

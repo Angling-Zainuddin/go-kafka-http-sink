@@ -13,7 +13,7 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     networks:
-      - go_net
+      - internal-tools
   zookeeper1:
     image: bitnami/zookeeper:3.7.0-debian-10-r264
     platform: linux/amd64
@@ -75,6 +75,8 @@ services:
 networks:
   go_net:
     driver: bridge
+  internal-tools:
+    external: true
 
 volumes:
   zookeeper1:
